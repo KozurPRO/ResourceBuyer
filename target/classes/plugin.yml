@@ -1,0 +1,6 @@
+name: ResourceBuyer
+version: '1.0-SNAPSHOT'
+main: ru.kozur.resourcebuyer.ResourceBuyer
+api-version: '1.16'
+commands:
+  buyer: {}
