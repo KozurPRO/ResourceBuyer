@@ -7,8 +7,6 @@ r
 Bsrc/main/java/ru/kozur/resourcebuyer/core/ResourceBuyerSystem.java,c\e\ce9dbc89d9eb5029c8d3f262f14c88ababab2e7f
 h
 8src/main/java/ru/kozur/resourcebuyer/BukkitListener.java,7\8\787eb706988bcdc7c30ff23f185fe897daff5dc0
-h
-8src/main/java/ru/kozur/resourcebuyer/enums/Category.java,8\5\859029e60f95102da455984ae7e112d4ec279766
 Å
 Q.idea/sonarlint/securityhotspotstore/8/5/859029e60f95102da455984ae7e112d4ec279766,c\7\c76391841928bb41181e707ca06a69eb8a8e7a89
 w

@@ -1,11 +1,21 @@
 
 w
-java:S1444"4Make this "public static buyerInventory" field final(¾ƒ¿…8İº—‰ğ1J$25edc34e-0509-4ef7-85ae-2df9b54babba
+java:S1444"4Make this "public static buyerInventory" field final(¾ƒ¿…8È‘²“ğ1J$0673fd1d-1e95-4794-86e0-24b95e8ef4bf
+x
+java:S1444"0Make this "public static schedulers" field final(‘å—·şÿÿÿÿ8È‘²“ğ1J$2a2caaf5-8d8c-4ba7-9770-c1019e88e200
+e
+java:S2386"Make this member "protected".(‘å—·şÿÿÿÿ8¢Â²“ğ1J$97d9b231-5dd1-46c1-975d-6992b99b8bb7
 }
-java:S1118":Add a private constructor to hide the implicit public one.(ÜŠØ8çº—‰ğ1J$8ba14f25-6eaf-4f08-bfbb-b68e7e3bcf5b
+java:S1118":Add a private constructor to hide the implicit public one.(ÜŠØ8Ó‘²“ğ1J$03252c90-e8f9-47b4-a8c8-7293478b9f5f
 z
-java:S1874"7Remove this use of "createInventory"; it is deprecated.(¾ƒ¿…8éº—‰ğ1J$6ae89014-e753-4ff5-be38-8c443de1992f
+java:S1874"7Remove this use of "createInventory"; it is deprecated.(¾ƒ¿…8Õ‘²“ğ1J$0844cff7-e0df-42fa-b26a-038fc4b6440c
+o
+java:S1602",Remove useless curly braces around statement(®Öªâ8»è³“ğ1J$57fcb64d-da95-409a-a69a-593c98c38993
 ~
-java:S1874"6Remove this use of "setDisplayName"; it is deprecated.(ıİş³ÿÿÿÿÿ8Ÿî²‰ğ1J$1c823fa5-9282-463c-a404-841bc04dbbad
+java:S1874'"6Remove this use of "setDisplayName"; it is deprecated.(ıİş³ÿÿÿÿÿ8Ú‘²“ğ1J$2e9f5b70-3f65-4fda-b472-95e549d614a4
+y
+java:S1874."6Remove this use of "setDisplayName"; it is deprecated.(ßá8Ü‘²“ğ1J$6feca996-fcfb-4cbd-abd2-4ef1678688a6
+r
+java:S1874/"/Remove this use of "setLore"; it is deprecated.( îéË8Ü‘²“ğ1J$d3e8adb0-9266-43a4-9d9b-d63667bbcdc1
 m
-java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8 î²‰ğ1J$1cf8be60-8116-4abf-9c90-7a19968ea606
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8ß–×“ğ1J$ebdfbe9c-95a8-4ace-98e6-1d44a63ad60b
