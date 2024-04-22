@@ -15,24 +15,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ResourceBuyerSystem {
-    public static Inventory buyerInventory = Bukkit.createInventory(null, 54, ChatColor.LIGHT_PURPLE + "Скупщик Ресурсов");
-    public static Map<Player,Integer> schedulers = new HashMap<>();
+    public static Map<Player, Inventory> inventory = new HashMap<>();
+    public static Map<Player, Integer> schedulers = new HashMap<>();
+
     public static void openMenu(Player player) {
-        player.openInventory(buyerInventory);
-        int id = Bukkit.getScheduler().scheduleSyncRepeatingTask(ResourceBuyer.getInstance(), () -> {
-            System.out.println("update");
-        }, 0L, 20L);
-        schedulers.put(player,id);
-    }
-    public static void initializeItems() {
-        createBarier();
+        if (!inventory.containsKey(player)) {
+            inventory.put(player, Bukkit.createInventory(null, 54, ChatColor.LIGHT_PURPLE + "Скупщик Ресурсов"));
+            initializeItems(player);
+        }
+        if (inventory.containsKey(player)) {
+            player.openInventory(inventory.get(player));
+            updateInventory(player,inventory.get(player));
+        }
     }
 
-    public static void createBarier() {
-        /*
-         * Create bariers
-         */
-
+    public static void initializeItems(Player player) {
         ItemStack blueGlass = new ItemStack(Material.BLUE_STAINED_GLASS);
         ItemMeta blueGlassMeta = blueGlass.getItemMeta();
 
@@ -49,12 +46,26 @@ public class ResourceBuyerSystem {
 
         limeDye.setItemMeta(limeDyeMeta);
 
-        buyerInventory.setItem(53,limeDye);
-        for (int i = 45; i < 54; i++) {
-            if (i == 53) return;
+        if (inventory.containsKey(player)) {
+            inventory.get(player).setItem(53, limeDye);
+            for (int i = 45; i < 54; i++) {
+                if (i == 53) return;
 
 
-            buyerInventory.setItem(i,blueGlass);
+                inventory.get(player).setItem(i, blueGlass);
+            }
         }
+    }
+
+
+    public static void updateInventory(Player player, Inventory inventory) {
+        int id = Bukkit.getScheduler().scheduleSyncRepeatingTask(ResourceBuyer.getInstance(), () -> {
+            /*
+             * Logic for inventory and update money what u will get
+             */
+            System.out.println("update");
+        }, 0L, 20L);
+
+        schedulers.put(player, id);
     }
 }

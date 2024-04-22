@@ -1,6 +1,8 @@
 
 q
 java:S1444
-".Make this "public static instance" field final(áß¼ý8þ³’‰ð1J$f5216ff8-d6e8-43aa-8684-931b58f611c1
+".Make this "public static instance" field final(áß¼ý8þ³’‰ð1J$1a807c86-ed92-4e77-994d-b55719297bf7
 ~
-java:S2696"6Make the enclosing method "static" or remove this set.(ñõîÙþÿÿÿÿ8‰´’‰ð1J$4648b367-4f56-4c1b-bf16-5b70b3dbe38c
+java:S2696"6Make the enclosing method "static" or remove this set.(ñõîÙþÿÿÿÿ8‰´’‰ð1J$d84f2e0e-7b30-4c35-bdce-41aa986a2b74
+i
+java:S1128"LRemove this unused import 'ru.kozur.resourcebuyer.core.ResourceBuyerSystem'.(åÐ¤‹8†ê¤”ð1

@@ -1,3 +1,11 @@
 
-s
-java:S1481"+Remove this unused "player" local variable.(¹ñøÿÿÿÿ8ÓïÌ“ğ1J$c593e5a8-550c-40be-ac5e-0762aa09c75b
+Q
+java:S1066"/Merge this if statement with the enclosing one.(£æ÷òıÿÿÿÿ8²†Ğ”ğ1
+Q
+java:S1066"/Merge this if statement with the enclosing one.(Ğ„®ßûÿÿÿÿ8²†Ğ”ğ1
+Q
+java:S10660"/Merge this if statement with the enclosing one.(ñà…¾ıÿÿÿÿ8³†Ğ”ğ1
+Q
+java:S10661"/Merge this if statement with the enclosing one.(ì×Ğ›ûÿÿÿÿ8³†Ğ”ğ1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Õˆúã8¾†Ğ”ğ1

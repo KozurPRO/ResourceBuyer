@@ -7,45 +7,48 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.ItemStack;
-import ru.kozur.resourcebuyer.core.ResourceBuyerSystem;
 
+import static ru.kozur.resourcebuyer.core.ResourceBuyerSystem.inventory;
 import static ru.kozur.resourcebuyer.core.ResourceBuyerSystem.schedulers;
 
 public class BukkitListener implements Listener {
 
     @EventHandler
     private void on(InventoryClickEvent event) {
+        Player player = (Player) event.getWhoClicked();
+        if (inventory.containsKey(player)) {
+            if (event.getClickedInventory() != null && event.getClickedInventory().equals(inventory.get(player))) {
 
-        if (event.getClickedInventory() != null && event.getClickedInventory().equals(ResourceBuyerSystem.buyerInventory)) {
-            Player player = (Player) event.getWhoClicked();
+                if (event.getClickedInventory().getItem(event.getSlot()) != null) {
+                    ItemStack clickedItem = event.getClickedInventory().getItem(event.getSlot());
+                    if (clickedItem.getItemMeta() == null) return;
 
-            if (event.getClickedInventory().getItem(event.getSlot()) != null) {
-                ItemStack clickedItem = event.getClickedInventory().getItem(event.getSlot());
-                if (clickedItem.getItemMeta() == null) return;
+                    String clickedItemLoc = clickedItem.getItemMeta().getLocalizedName();
 
-                String clickedItemLoc = clickedItem.getItemMeta().getLocalizedName();
+                    if (clickedItemLoc.equals("blue glass")) {
+                        event.setCancelled(true);
+                    }
 
-                if (clickedItemLoc.equals("blue glass")) {
-                    event.setCancelled(true);
+                    if (clickedItemLoc.equals("sell")) {
+                        event.setCancelled(true);
+                    }
+
                 }
-
-                if (clickedItemLoc.equals("sell")) {
-                    event.setCancelled(true);
-                }
-
             }
         }
     }
 
     @EventHandler
     private void on(InventoryCloseEvent event) {
-        if (event.getInventory().equals(ResourceBuyerSystem.buyerInventory)) {
-            Player player = (Player) event.getPlayer();
-            if(schedulers.containsKey(player)) {
-            System.out.println("its what u need " + player.getName());
-            int id = schedulers.get(player);
-                System.out.println(id);
-            Bukkit.getScheduler().cancelTask(id);
+        /*
+         * Checking inventory, and getting task id and remove from list
+         */
+        Player player = (Player) event.getPlayer();
+        if (inventory.containsKey(player)) {
+            if (event.getInventory().equals(inventory.get(player))) {
+                if (schedulers.containsKey(player)) {
+                    Bukkit.getScheduler().cancelTask(schedulers.get(player));
+                }
             }
         }
     }

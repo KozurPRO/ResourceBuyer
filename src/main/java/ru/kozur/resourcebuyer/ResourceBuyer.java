@@ -13,7 +13,6 @@ public final class ResourceBuyer extends JavaPlugin {
         instance = this;
         getCommand("buyer").setExecutor(new BuyerOpen());
         getServer().getPluginManager().registerEvents(new BukkitListener(),this);
-        ResourceBuyerSystem.initializeItems();
     }
 
     @Override
